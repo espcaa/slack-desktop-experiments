@@ -14,6 +14,7 @@ function Toggle({ enabled, onToggle, label = "" }: ToggleProps) {
       aria-pressed="true"
       aria-label="Filtrer par messages non lus, 0 non lu(s)"
       type="button"
+      onToggle={onToggle}
     >
       <div className="p-unreads_toggle__label">
         <span

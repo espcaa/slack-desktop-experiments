@@ -122,11 +122,16 @@ export default function App() {
                 <div
                   style={{ display: "flex", flexDirection: "column", gap: 8 }}
                 >
-                  <Card width={180} height={120} backgroundColor="aubergine" />
                   <Card
                     width={180}
                     height={120}
                     backgroundColor="aquarium"
+                    imageSrc="https://picsum.photos/id/598/200/300"
+                  />
+                  <Card
+                    width={180}
+                    height={120}
+                    backgroundColor="aubergine"
                     title="Reload slack </>"
                     onClick={() => {
                       window.location.reload();

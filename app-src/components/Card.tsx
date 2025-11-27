@@ -15,7 +15,7 @@ const colorsDict = {
 };
 
 export default function Card({
-  title,
+  title = "",
   imageSrc = "",
   backgroundColor,
   width,
@@ -42,21 +42,23 @@ export default function Card({
       // style="--width: 180;"
     >
       <div className="header__xDYH3">
-        <p className="title__tDet7">
-          <span
-            className="c-truncate"
-            // style="--lines: 2; word-break: break-word;"
-            style={
-              { "--lines": 2, wordBreak: "break-word" } as React.CSSProperties
-            }
-          >
-            {title || "Card Title"}
-          </span>
-        </p>
+        {title != "" && (
+          <p className="title__tDet7">
+            <span
+              className="c-truncate"
+              // style="--lines: 2; word-break: break-word;"
+              style={
+                { "--lines": 2, wordBreak: "break-word" } as React.CSSProperties
+              }
+            >
+              {title}
+            </span>
+          </p>
+        )}
         <p className="description__NZYOf"></p>
       </div>
-      {imageSrc != "" && (
-        <img className="image__bzQGQinviteImage__jImW1" src={imageSrc}></img>
+      {imageSrc && (
+        <img className="image__bzQGQinviteImage__jImW1" src={imageSrc} alt="" />
       )}
     </button>
   );
